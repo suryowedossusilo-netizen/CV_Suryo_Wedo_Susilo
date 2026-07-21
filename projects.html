@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Suryo Wedo Susilo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<base target="_self">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">SW<span class="highlight">S</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="projects.html" class="active">Portofolio</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Project <span class="highlight">Saya</span></h1>
+            <p class="page-subtitle">Kumpulan karya dan pengalaman teknis saya</p>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects-section">
+        <div class="container">
+            <!-- Filter -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="aplikasi">Aplikasi</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="projects-grid" id="projectsContainer">
+                <!-- Card 1: Tugas Kuliah -->
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="Tugas Kuliah - Coding Project">
+                        <div class="project-badges">
+                            <div class="star-badge">
+                                <i class="fas fa-star"></i> 0
+                            </div>
+                            <div class="category-badge">Web</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">TUGAS KULIAH</h3>
+                            <div class="project-category-text">Web Development</div>
+                        </div>
+                        <p class="project-description">
+                            Kumpulan tugas kuliah (Universitas Wijaya Putra) berisi berbagai project akademik dan latihan pemrograman.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Project Akademik</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Latihan Pemrograman</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Studi Kasus</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">HTML</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-stats">
+                                <span><i class="fas fa-code-branch"></i> 0</span>
+                                <span><i class="fas fa-eye"></i> Public</span>
+                            </div>
+                            <a href="https://github.com/suryowedossusilo-netizen" target="_self" rel="noopener noreferrer" class="project-link">
+                                Lihat Repo <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Personal Branding -->
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="Personal Branding Website">
+                        <div class="project-badges">
+                            <div class="star-badge">
+                                <i class="fas fa-star"></i> 0
+                            </div>
+                            <div class="category-badge">Web</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">SuryoWedossusilo Netizen</h3>
+                            <div class="project-category-text">Web Development</div>
+                        </div>
+                        <p class="project-description">
+                            Repository personal branding dan netizen profile dengan berbagai fitur interaktif dan desain modern.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Personal Profile</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Interaktif UI</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Responsive Design</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">HTML5</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-stats">
+                                <span><i class="fas fa-code-branch"></i> 0</span>
+                                <span><i class="fas fa-eye"></i> Public</span>
+                            </div>
+                            <a href="https://github.com/suryowedossusilo-netizen" target="_blank" rel="noopener noreferrer" class="project-link">
+                                Lihat Repo <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3: UWP Funrun -->
+                <article class="project-card" data-category="aplikasi">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80" alt="UWP Fun Run Event">
+                        <div class="project-badges">
+                            <div class="star-badge">
+                                <i class="fas fa-star"></i> 0
+                            </div>
+                            <div class="category-badge">Aplikasi</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">UWP Funrun</h3>
+                            <div class="project-category-text">Aplikasi Web</div>
+                        </div>
+                        <p class="project-description">
+                            Aplikasi event fun run untuk Universitas Wijaya Putra dengan fokus pada teknologi frontend modern.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Event Registration</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Participant Dashboard</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Real-time Updates</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-stats">
+                                <span><i class="fas fa-code-branch"></i> 0</span>
+                                <span><i class="fas fa-eye"></i> Public</span>
+                            </div>
+                            <a href="https://github.com/suryowedossusilo-netizen" target="_self" rel="noopener noreferrer" class="project-link">
+                                Lihat Repo <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">SW<span class="highlight">S</span></a>
+                    <p>IT Support Profesional & Digital Enthusiast</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Tentang</a>
+                    <a href="projects.html">Portofolio</a>
+                    <a href="contact.html">Kontak</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/suryowedossusilo-netizen" target="_self" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/suryo-wedo-susilo" target="_self" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/Vruimte_" target="_self" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Suryo Wedo Susilo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

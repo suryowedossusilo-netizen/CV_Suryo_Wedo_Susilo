@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya | Suryo Wedo Susilo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <base target="_self">
+    <style>
+        /* Move inline skill widths to stylesheet to avoid inline styles */
+        .skill-fill { height: 100%; background-color: var(--accent-color, #4caf50); display: block; }
+        .skill-fill[data-percent="90"] { width: 90%; }
+        .skill-fill[data-percent="85"] { width: 85%; }
+        .skill-fill[data-percent="80"] { width: 80%; }
+        .skills-dashboard-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .section-subtitle {
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .skill-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .skill-card h3 {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tech-skills h3 {
+            color: #e94560;
+        }
+        
+        .soft-skills h3 {
+            color: #0f3460;
+        }
+        
+        .skill-bar-item {
+            margin-bottom: 20px;
+        }
+        
+        .skill-bar-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .skill-bar-header span:first-child {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .skill-percentage {
+            color: #e94560;
+            font-weight: bold;
+        }
+        
+        .skill-bar-container {
+            background: #e9ecef;
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .skill-bar-fill {
+            height: 100%;
+            border-radius: 6px;
+            animation: fillBar 1.5s ease-out;
+        }
+
+        .skill-bar-fill-90 {
+            width: 90%;
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+            animation-delay: 0.1s;
+        }
+
+        .skill-bar-fill-85 {
+            width: 85%;
+            background: linear-gradient(90deg, #ff6b6b, #ff8585);
+            animation-delay: 0.2s;
+        }
+
+        .skill-bar-fill-85-3 {
+            width: 85%;
+            background: linear-gradient(90deg, #ff6b6b, #ff8585);
+            animation-delay: 0.3s;
+        }
+
+        .skill-bar-fill-80 {
+            width: 80%;
+            background: linear-gradient(90deg, #ff8585, #ffb8b8);
+            animation-delay: 0.4s;
+        }
+        
+        .skill-bar-fill.tech-gradient-1,
+        .skill-bar-fill.tech-gradient-2 {
+            background: linear-gradient(90deg, #e94560, #ff6b6b);
+        }
+        
+        .skill-bar-fill.tech-gradient-3,
+        .skill-bar-fill.tech-gradient-4 {
+            background: linear-gradient(90deg, #ff6b6b, #ff8585);
+        }
+        
+        .skill-bar-fill.tech-gradient-5 {
+            background: linear-gradient(90deg, #ff8585, #ffb8b8);
+        }
+        
+        .soft-skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .progress-circle {
+            text-align: center;
+        }
+        
+        .progress-circle-svg {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 10px;
+        }
+        
+        .progress-label {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">SW<span class="highlight">S</span></a>
+            <button type="button" class="nav-toggle" id="navToggle-about" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">Tentang</a></li>
+                <li><a href="projects.html">Portofolio</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Tentang <span class="highlight">Saya</span></h1>
+            <p class="page-subtitle">Mengenal lebih dekat siapa saya</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="assets/images/profil2.jpg" alt="Suryo Wedo Susilo" id="aboutImage">
+                    <div class="experience-badge">
+                        <span class="number">8+</span>
+                        <span class="text">Tahun<br>Pengalaman</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2>Suryo Wedo Susilo</h2>
+                    <p class="about-role">IT Support Profesional</p>
+                    <div class="about-text">
+                        <p>IT Support profesional dengan pengalaman dalam pengelolaan dan pemeliharaan infrastruktur teknologi informasi untuk mendukung kelancaran operasional perusahaan. Berpengalaman dalam melakukan instalasi, konfigurasi, serta troubleshooting perangkat keras dan perangkat lunak pada lingkungan kerja dengan banyak pengguna.</p>
+                    </div>
+
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-user"></i> Nama:</span>
+                            <span class="value">Suryo Wedo Susilo</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-calendar-alt"></i> Tempat, Tgl Lahir:</span>
+                            <span class="value">Magetan, 6 Agustus 1998</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-envelope"></i> Email:</span>
+                            <span class="value">25053013@student.uwp.ac.id</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-phone"></i> Telepon:</span>
+                            <span class="value">+62 882 3133 4391</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-map-marker-alt"></i> Lokasi:</span>
+                            <span class="value">Surabaya, Jawa Timur</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-graduation-cap"></i> Status:</span>
+                            <span class="value">Mahasiswa Aktif</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label"><i class="fas fa-flag"></i> Kebangsaan:</span>
+                            <span class="value">Indonesia</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label"><i class="fab fa-github"></i> GitHub:</span>
+                            <span class="value">github.com/suryowedossusilo-netizen</span>
+                        </div>
+                    </div>
+
+                    <div class="about-buttons">
+                        <a href="contact.html" class="btn btn-primary">Hubungi Saya</a>
+                        <a href="https://drive.google.com/file/d/1eTiuidRUvcqx3aAX0KhzxMoconwBWNHU/view?usp=sharing" class="btn btn-black" target="_self" rel="noopener noreferrer">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Dashboard Section -->
+    <section class="skills-dashboard-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Keahlian & <span class="highlight">Skill</span></h2>
+                <p class="section-subtitle">Visualisasi kompetensi dan keahlian teknis</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Technical Skills Card -->
+                <div class="dashboard-card card-technical">
+                    <h3 class="card-title">
+                        <i class="fas fa-laptop-code"></i> Technical Skills
+                    </h3>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-header">
+                            <span>IT Support</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-percent="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-header">
+                            <span>Troubleshooting Hardware & Software</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-percent="90"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-header">
+                            <span>Sistem Audio/Video</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-percent="85"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-header">
+                            <span>Instalasi & Konfigurasi</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-percent="85"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-bar-item">
+                        <div class="skill-header">
+                            <span>Pengelolaan Jaringan</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-track">
+                            <div class="skill-fill" data-percent="80"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills Card -->
+                <div class="dashboard-card card-soft">
+                    <h3 class="card-title">
+                        <i class="fas fa-users"></i> Soft Skills
+                    </h3>
+
+                    <div class="soft-skills-grid">
+                        <div class="circular-skill">
+                            <div class="circular-progress" data-percent="90">
+                                <svg viewBox="0 0 100 100">
+                                    <circle class="circle-bg" cx="50" cy="50" r="45"/>
+                                    <circle class="circle-fill" cx="50" cy="50" r="45" stroke-dasharray="283" stroke-dashoffset="28"/>
+                                </svg>
+                                <span class="circular-text">9/10</span>
+                            </div>
+                            <span class="circular-label">Komunikasi</span>
+                        </div>
+
+                        <div class="circular-skill">
+                            <div class="circular-progress" data-percent="90">
+                                <svg viewBox="0 0 100 100">
+                                    <circle class="circle-bg" cx="50" cy="50" r="45"/>
+                                    <circle class="circle-fill" cx="50" cy="50" r="45" stroke-dasharray="283" stroke-dashoffset="28"/>
+                                </svg>
+                                <span class="circular-text">9/10</span>
+                            </div>
+                            <span class="circular-label">Kepemimpinan</span>
+                        </div>
+
+                        <div class="circular-skill">
+                            <div class="circular-progress" data-percent="90">
+                                <svg viewBox="0 0 100 100">
+                                    <circle class="circle-bg" cx="50" cy="50" r="45"/>
+                                    <circle class="circle-fill" cx="50" cy="50" r="45" stroke-dasharray="283" stroke-dashoffset="28"/>
+                                </svg>
+                                <span class="circular-text">9/10</span>
+                            </div>
+                            <span class="circular-label">Pekerja Keras</span>
+                        </div>
+
+                        <div class="circular-skill">
+                            <div class="circular-progress" data-percent="80">
+                                <svg viewBox="0 0 100 100">
+                                    <circle class="circle-bg" cx="50" cy="50" r="45"/>
+                                    <circle class="circle-fill" cx="50" cy="50" r="45" stroke-dasharray="283" stroke-dashoffset="57"/>
+                                </svg>
+                                <span class="circular-text">8/10</span>
+                            </div>
+                            <span class="circular-label">Cekatan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages Card -->
+                <div class="dashboard-card card-languages">
+                    <h3 class="card-title">
+                        <i class="fas fa-language"></i> Bahasa
+                    </h3>
+
+                    <div class="language-gauges">
+                        <div class="gauge-item">
+                            <div class="gauge-container">
+                                <svg viewBox="0 0 140 80">
+                                    <path class="gauge-bg" d="M 10 70 A 60 60 0 0 1 130 70"/>
+                                    <path class="gauge-fill gauge-fill-full" d="M 10 70 A 60 60 0 0 1 130 70"/>
+                                </svg>
+                                <span class="gauge-text">10/10</span>
+                            </div>
+                            <div class="gauge-info">
+                                <span class="gauge-name">Bahasa Indonesia</span>
+                                <span class="gauge-level">Native</span>
+                            </div>
+                        </div>
+
+                        <div class="gauge-item">
+                            <div class="gauge-container">
+                                <svg viewBox="0 0 140 80">
+                                    <path class="gauge-bg" d="M 10 70 A 60 60 0 0 1 130 70"/>
+                                    <path class="gauge-fill gauge-fill-partial" d="M 10 70 A 60 60 0 0 1 106 18"/>
+                                </svg>
+                                <span class="gauge-text">8/10</span>
+                            </div>
+                            <div class="gauge-info">
+                                <span class="gauge-name">Bahasa Inggris</span>
+                                <span class="gauge-level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats Card -->
+                <div class="dashboard-card card-stats">
+                    <h3 class="card-title">
+                        <i class="fas fa-chart-pie"></i> Quick Stats
+                    </h3>
+
+                    <div class="stats-grid-mini">
+                        <div class="stat-mini stat-red">
+                            <div class="stat-mini-number">3+</div>
+                            <div class="stat-mini-label">Tahun Pengalaman</div>
+                        </div>
+
+                        <div class="stat-mini stat-blue">
+                            <div class="stat-mini-number">5</div>
+                            <div class="stat-mini-label">Technical Skills</div>
+                        </div>
+
+                        <div class="stat-mini stat-green">
+                            <div class="stat-mini-number">4</div>
+                            <div class="stat-mini-label">Soft Skills</div>
+                        </div>
+
+                        <div class="stat-mini stat-yellow">
+                            <div class="stat-mini-number">2</div>
+                            <div class="stat-mini-label">Bahasa</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pengalaman & <span class="highlight">Organisasi</span></h2>
+                <p class="section-subtitle">Perjalanan saya dalam dunia kerja dan organisasi</p>
+            </div>
+            <div class="timeline" id="experienceTimeline">
+
+                <!-- Work Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Desember 2023 - Sekarang</div>
+                    <div class="timeline-title">IT Support</div>
+                    <div class="timeline-company">PT. Summaedu Visitama</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Membantu pengguna dalam mengatasi masalah pada komputer, software, maupun jaringan</li>
+                            <li>Melakukan instalasi, konfigurasi, dan pemeliharaan perangkat keras serta perangkat lunak</li>
+                            <li>Melakukan pengecekan rutin kebersihan dan keadaan meja pelanggan</li>
+                            <li>Melakukan pengecekan rutin pada sistem komputer dan jaringan untuk memastikan semuanya berjalan dengan baik</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Work Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Maret 2021 - Juni 2023</div>
+                    <div class="timeline-title">Teknisi</div>
+                    <div class="timeline-company">PT. Nav Karaoke</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Melakukan instalasi dan pengaturan perangkat karaoke seperti sound system, mikrofon, layar, dan perangkat pemutar lagu</li>
+                            <li>Memastikan semua peralatan karaoke berfungsi dengan baik sebelum dan selama operasional</li>
+                            <li>Melakukan pengecekan rutin serta perawatan pada perangkat audio, video, dan jaringan sistem karaoke</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Organization Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2017 - 2023</div>
+                    <div class="timeline-title">Ketua Karang Taruna</div>
+                    <div class="timeline-company">RW 010 Surabaya, Jawa Timur</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Mengkoordinasikan kegiatan antara Karang Taruna dengan pihak eksternal</li>
+                            <li>Membina hubungan baik dengan seluruh anggota Karang Taruna</li>
+                            <li>Mewakili masyarakat dalam berbagai acara</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pendidikan</h2>
+                <p class="section-subtitle">Riwayat pendidikan saya</p>
+            </div>
+            <div class="education-grid">
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-info">
+                        <h3>Universitas Wijaya Putra</h3>
+                        <p class="education-year">2025 - Sekarang</p>
+                        <p class="education-major">Teknik Informatika</p>
+                        <p class="education-status">Mahasiswa Aktif | IPK: 8.8</p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-info">
+                        <h3>SMK Wijaya Putra Surabaya</h3>
+                        <p class="education-year">2015 - 2016</p>
+                        <p class="education-major">Teknik Komputer dan Jaringan</p>
+                        <p class="education-status">Lulus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">SW<span class="highlight">S</span></span>
+                    <p>IT Support Profesional & Digital Enthusiast</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Tentang</a>
+                    <a href="projects.html">Portofolio</a>
+                    <a href="contact.html">Kontak</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/suryowedossusilo-netizen" target="_self" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/suryo-wedo-susilo" target="_self" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/Vruimte_" target="_self" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Suryo Wedo Susilo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+            }
+
+            // Animate skill bars on scroll
+            const skillBars = document.querySelectorAll('.skill-fill');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.width = entry.target.style.width;
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            skillBars.forEach(bar => observer.observe(bar));
+
+            // Animate timeline items
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const timelineObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('animate-in');
+                        }, index * 200);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            timelineItems.forEach(item => timelineObserver.observe(item));
+        });
+    </script>
+</body>

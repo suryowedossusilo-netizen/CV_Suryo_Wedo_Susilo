@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak | Suryo Wedo Susilo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<base target="_self">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">SW<span class="highlight">S</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="projects.html">Portofolio</a></li>
+                <li><a href="contact.html" class="active">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Hubungi <span class="highlight">Saya</span></h1>
+            <p class="page-subtitle">Mari berkolaborasi dan diskusi bersama</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Left: Contact Info -->
+                <div class="contact-info">
+                    <h2>Mari Berbicara!</h2>
+                    <p>Tertarik untuk bekerja sama atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h4>Email</h4>
+                                <a href="mailto:25053013@student.uwp.ac.id">25053013@student.uwp.ac.id</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h4>Instagram</h4>
+                                <a href="https://www.instagram.com/vruimte_" target="_blank" rel="noopener noreferrer">@Vruimte_</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/suryo-wedo-susilo/" target="_blank" rel="noopener noreferrer">Suryo Wedo Susilo</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h4>Lokasi</h4>
+                                <a href="https://maps.google.com/?q=Surabaya,Jawa+Timur" target="_blank" rel="noopener noreferrer">Surabaya, Jawa Timur</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-connect">
+                        <h4>Ikuti Saya</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/suryowedossusilo-netizen" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/suryo-wedo-susilo" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/Vruimte_" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://x.com/VRuimte" target="_blank" rel="noopener noreferrer" class="social-icon" title="X (Twitter)">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+                            <span class="form-error">Nama wajib diisi</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="email@example.com">
+                            <span class="form-error">Email tidak valid</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Subjek pesan">
+                            <span class="form-error">Subjek wajib diisi</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tulis pesan Anda..."></textarea>
+                            <span class="form-error">Pesan wajib diisi</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">SW<span class="highlight">S</span></span>
+                    <p>IT Support Profesional & Digital Enthusiast</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">Tentang</a>
+                    <a href="projects.html">Portofolio</a>
+                    <a href="contact.html">Kontak</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/suryowedossusilo-netizen" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/suryo-wedo-susilo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/Vruimte_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Suryo Wedo Susilo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    navToggle.classList.toggle('active');
+                });
+            }
+
+            // Form validation and submission
+            const contactForm = document.getElementById('contactForm');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                let isValid = true;
+                const formGroups = contactForm.querySelectorAll('.form-group');
+
+                formGroups.forEach(group => {
+                    const input = group.querySelector('input, textarea');
+                    const error = group.querySelector('.form-error');
+
+                    if (!input.value.trim()) {
+                        group.classList.add('has-error');
+                        isValid = false;
+                    } else if (input.type === 'email' && !isValidEmail(input.value)) {
+                        group.classList.add('has-error');
+                        isValid = false;
+                    } else {
+                        group.classList.remove('has-error');
+                    }
+                });
+
+                if (isValid) {
+                    // Simulate form submission
+                    const submitBtn = contactForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+                    submitBtn.disabled = true;
+
+                    setTimeout(() => {
+                        alert('Terima kasih! Pesan Anda telah terkirim. Saya akan menghubungi Anda segera.');
+                        contactForm.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 1500);
+                }
+            });
+
+            // Real-time validation
+            const inputs = contactForm.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('blur', () => {
+                    const group = input.closest('.form-group');
+                    if (!input.value.trim()) {
+                        group.classList.add('has-error');
+                    } else if (input.type === 'email' && !isValidEmail(input.value)) {
+                        group.classList.add('has-error');
+                    } else {
+                        group.classList.remove('has-error');
+                    }
+                });
+
+                input.addEventListener('input', () => {
+                    const group = input.closest('.form-group');
+                    if (input.value.trim()) {
+                        group.classList.remove('has-error');
+                    }
+                });
+            });
+
+            function isValidEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+        });
+    </script>
+</body>
+</html>
