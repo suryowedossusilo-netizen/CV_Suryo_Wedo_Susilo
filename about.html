@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <base target="_self">
     <style>
-        /* Move inline skill widths to stylesheet to avoid inline styles */
         .skill-fill { height: 100%; background-color: var(--accent-color, #4caf50); display: block; }
         .skill-fill[data-percent="90"] { width: 90%; }
         .skill-fill[data-percent="85"] { width: 85%; }
@@ -20,43 +19,36 @@
             padding: 80px 0;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
-        
         .section-header {
             text-align: center;
             margin-bottom: 50px;
         }
-        
         .section-title {
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
-        
         .section-subtitle {
             color: #6c757d;
             font-size: 1.1rem;
         }
-        
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
         }
-        
         .skill-card {
             background: white;
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
-        
         .skill-card h3 {
             margin-bottom: 25px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-        
         .tech-skills h3 {
             color: #e94560;
         }
@@ -161,11 +153,10 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav id="navbar" class="navbar scrolled">
         <div class="container">
             <a href="index.html" class="logo">SW<span class="highlight">S</span></a>
-            <button type="button" class="nav-toggle" id="navToggle-about" aria-label="Toggle navigation">
+            <button type="button" class="navToggle" id="navToggle-about" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-menu" id="navMenu">
@@ -176,16 +167,12 @@
             </ul>
         </div>
     </nav>
-
-    <!-- About Hero -->
     <section class="page-hero">
         <div class="container">
             <h1 class="page-title">Tentang <span class="highlight">Saya</span></h1>
             <p class="page-subtitle">Mengenal lebih dekat siapa saya</p>
         </div>
     </section>
-
-    <!-- About Content -->
     <section class="about-section">
         <div class="container">
             <div class="about-grid">
@@ -202,7 +189,6 @@
                     <div class="about-text">
                         <p>IT Support profesional dengan pengalaman dalam pengelolaan dan pemeliharaan infrastruktur teknologi informasi untuk mendukung kelancaran operasional perusahaan. Berpengalaman dalam melakukan instalasi, konfigurasi, serta troubleshooting perangkat keras dan perangkat lunak pada lingkungan kerja dengan banyak pengguna.</p>
                     </div>
-
                     <div class="personal-info">
                         <div class="info-item">
                             <span class="label"><i class="fas fa-user"></i> Nama:</span>
@@ -237,7 +223,6 @@
                             <span class="value">github.com/suryowedossusilo-netizen</span>
                         </div>
                     </div>
-
                     <div class="about-buttons">
                         <a href="contact.html" class="btn btn-primary">Hubungi Saya</a>
                         <a href="https://drive.google.com/file/d/1eTiuidRUvcqx3aAX0KhzxMoconwBWNHU/view?usp=sharing" class="btn btn-black" target="_self" rel="noopener noreferrer">
@@ -248,8 +233,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Skills Dashboard Section -->
     <section class="skills-dashboard-section">
         <div class="container">
             <div class="section-header">
@@ -258,7 +241,6 @@
             </div>
 
             <div class="dashboard-grid">
-                <!-- Technical Skills Card -->
                 <div class="dashboard-card card-technical">
                     <h3 class="card-title">
                         <i class="fas fa-laptop-code"></i> Technical Skills
@@ -314,8 +296,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Soft Skills Card -->
                 <div class="dashboard-card card-soft">
                     <h3 class="card-title">
                         <i class="fas fa-users"></i> Soft Skills
@@ -367,8 +347,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Languages Card -->
                 <div class="dashboard-card card-languages">
                     <h3 class="card-title">
                         <i class="fas fa-language"></i> Bahasa
@@ -404,8 +382,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Quick Stats Card -->
                 <div class="dashboard-card card-stats">
                     <h3 class="card-title">
                         <i class="fas fa-chart-pie"></i> Quick Stats
@@ -436,8 +412,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Experience Timeline -->
     <section class="experience-section">
         <div class="container">
             <div class="section-header">
@@ -445,8 +419,6 @@
                 <p class="section-subtitle">Perjalanan saya dalam dunia kerja dan organisasi</p>
             </div>
             <div class="timeline" id="experienceTimeline">
-
-                <!-- Work Experience 1 -->
                 <div class="timeline-item">
                     <div class="timeline-date">Desember 2023 - Sekarang</div>
                     <div class="timeline-title">IT Support</div>
@@ -460,8 +432,6 @@
                         </ul>
                     </div>
                 </div>
-
-                <!-- Work Experience 2 -->
                 <div class="timeline-item">
                     <div class="timeline-date">Maret 2021 - Juni 2023</div>
                     <div class="timeline-title">Teknisi</div>
@@ -474,8 +444,6 @@
                         </ul>
                     </div>
                 </div>
-
-                <!-- Organization Experience -->
                 <div class="timeline-item">
                     <div class="timeline-date">2017 - 2023</div>
                     <div class="timeline-title">Ketua Karang Taruna</div>
@@ -491,8 +459,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Education Section -->
     <section class="education-section">
         <div class="container">
             <div class="section-header">
@@ -564,7 +530,6 @@
     <script src="js/animation.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu toggle
             const navToggle = document.getElementById('navToggle');
             const navMenu = document.getElementById('navMenu');
 
@@ -574,8 +539,6 @@
                     navToggle.classList.toggle('active');
                 });
             }
-
-            // Animate skill bars on scroll
             const skillBars = document.querySelectorAll('.skill-fill');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -587,8 +550,6 @@
             }, { threshold: 0.5 });
 
             skillBars.forEach(bar => observer.observe(bar));
-
-            // Animate timeline items
             const timelineItems = document.querySelectorAll('.timeline-item');
             const timelineObserver = new IntersectionObserver((entries) => {
                 entries.forEach((entry, index) => {
