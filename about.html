@@ -529,15 +529,33 @@
     <script src="js/main.js"></script>
     <script src="js/animation.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navToggle = document.getElementById('navToggle');
-            const navMenu = document.getElementById('navMenu');
+       document.addEventListener('DOMContentLoaded', () => {
+    const skillBars = document.querySelectorAll('.skill-fill');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const percent = entry.target.getAttribute('data-percent');
+                entry.target.style.width = percent + '%';
+                entry.target.classList.add('animated');
+            }
+        });
+    }, { threshold: 0.5 });
 
-            if (navToggle && navMenu) {
-                navToggle.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
-                    navToggle.classList.toggle('active');
-                });
+    skillBars.forEach(bar => observer.observe(bar));
+    
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, index * 200);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    timelineItems.forEach(item => timelineObserver.observe(item));
+});
             }
             const skillBars = document.querySelectorAll('.skill-fill');
             const observer = new IntersectionObserver((entries) => {
@@ -563,5 +581,6 @@
 
             timelineItems.forEach(item => timelineObserver.observe(item));
         });
-    </script>
+      </script>
 </body>
+</html>
