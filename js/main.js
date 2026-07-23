@@ -4,9 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initBackToTop();
 });
 
-/* ============================================
-   NAVIGATION
-   ============================================ */
 function initNavigation() {
     const navbar = document.getElementById('navbar');
     const navToggle = document.getElementById('navToggle');
