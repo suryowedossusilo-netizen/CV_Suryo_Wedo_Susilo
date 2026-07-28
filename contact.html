@@ -12,7 +12,6 @@
 <base target="_self">
 </head>
 <body>
-    <!-- Navigation -->
     <nav id="navbar" class="navbar scrolled">
         <div class="container">
             <a href="index.html" class="logo">SW<span class="highlight">S</span></a>
@@ -27,21 +26,15 @@
             </ul>
         </div>
     </nav>
-
-    <!-- Contact Hero -->
     <section class="page-hero">
         <div class="container">
             <h1 class="page-title">Hubungi <span class="highlight">Saya</span></h1>
             <p class="page-subtitle">Mari berkolaborasi dan diskusi bersama</p>
         </div>
     </section>
-
-    <!-- Contact Section -->
     <section class="contact-section">
         <div class="container">
             <div class="contact-grid">
-
-                <!-- Left: Contact Info -->
                 <div class="contact-info">
                     <h2>Mari Berbicara!</h2>
                     <p>Tertarik untuk bekerja sama atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya.</p>
@@ -106,8 +99,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Right: Contact Form -->
                 <div class="contact-form-wrapper">
                     <form id="contactForm" class="contact-form" novalidate>
                         <div class="form-group">
@@ -142,8 +133,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -167,6 +156,9 @@
                     <a href="https://www.instagram.com/Vruimte_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
+                    <a href="https://www.instagram.com/Vruimte_" target="_blank" rel="noopener noreferrer" aria-label="x">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -179,7 +171,6 @@
     <script src="js/animation.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu toggle
             const navToggle = document.getElementById('navToggle');
             const navMenu = document.getElementById('navMenu');
 
@@ -189,8 +180,6 @@
                     navToggle.classList.toggle('active');
                 });
             }
-
-            // Form validation and submission
             const contactForm = document.getElementById('contactForm');
 
             contactForm.addEventListener('submit', (e) => {
@@ -202,7 +191,6 @@
                 formGroups.forEach(group => {
                     const input = group.querySelector('input, textarea');
                     const error = group.querySelector('.form-error');
-
                     if (!input.value.trim()) {
                         group.classList.add('has-error');
                         isValid = false;
@@ -215,7 +203,6 @@
                 });
 
                 if (isValid) {
-                    // Simulate form submission
                     const submitBtn = contactForm.querySelector('button[type="submit"]');
                     const originalText = submitBtn.innerHTML;
                     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
@@ -229,8 +216,6 @@
                     }, 1500);
                 }
             });
-
-            // Real-time validation
             const inputs = contactForm.querySelectorAll('input, textarea');
             inputs.forEach(input => {
                 input.addEventListener('blur', () => {
