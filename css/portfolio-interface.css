@@ -1,0 +1,158 @@
+/* Portfolio interface — home page only */
+body.portfolio-home{--ink:#080d12;--panel:#101a22;--panel-soft:#172630;--steel:#a9c3d1;--mist:#d7e5ec;--muted:#91a6b1;background:#0b141b;color:#edf4f7;font-family:'DM Sans',sans-serif}
+.portfolio-home .interface-backdrop{position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 12% 18%,rgba(73,125,150,.42),transparent 34%),radial-gradient(ellipse at 88% 72%,rgba(81,119,137,.26),transparent 35%),linear-gradient(135deg,#172c38,#0b151c 58%,#203746)}
+.portfolio-home .interface-backdrop:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 20%,rgba(210,232,242,.035) 50%,transparent 80%);pointer-events:none}
+.portfolio-home .navbar{top:20px;left:50%;right:auto;transform:translateX(-50%);width:min(1120px,calc(100% - 48px));padding:0;background:rgba(13,22,29,.88);border:1px solid rgba(198,221,232,.14);border-radius:50px;box-shadow:0 14px 40px rgba(0,0,0,.3);backdrop-filter:blur(18px)}
+.portfolio-home .navbar.scrolled{padding:0;background:rgba(13,22,29,.88);box-shadow:0 14px 40px rgba(0,0,0,.3)}
+.portfolio-home .nav-container{min-height:66px;padding:0 24px}
+.portfolio-home .logo{font-family:'Barlow Condensed',sans-serif;color:#eaf3f7;font-size:1.65rem;letter-spacing:2px}
+.portfolio-home .logo span{color:#86a9ba}
+.portfolio-home .nav-menu{gap:4px}
+.portfolio-home .nav-menu a{color:#c3d0d7;font-size:.84rem;letter-spacing:.09em;text-transform:uppercase;padding:10px 15px;border-radius:30px}
+.portfolio-home .nav-menu a:hover,.portfolio-home .nav-menu a.active{color:#fff;background:rgba(170,202,218,.13)}
+.portfolio-home .nav-toggle{color:#e8f1f5}
+.portfolio-home .hero{min-height:880px;padding:145px 0 86px;background:transparent;overflow:hidden}
+.portfolio-home .hero-bg{display:none}
+.portfolio-home .interface-shell{position:relative;max-width:1180px}
+.portfolio-home .portfolio-window{position:relative;min-height:650px;padding:42px 54px 74px 220px;background:linear-gradient(145deg,rgba(4,8,12,.98),rgba(9,16,22,.97));border:1px solid rgba(190,220,233,.16);border-radius:42px;box-shadow:0 35px 90px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.08);overflow:visible}
+.portfolio-home .window-topline{position:absolute;top:0;left:0;right:0;height:48px;border-bottom:1px solid rgba(190,220,233,.12);display:flex;align-items:center;justify-content:center}
+.portfolio-home .window-label{font-size:.66rem;font-weight:700;letter-spacing:.45em;color:#a8c2cf}
+.portfolio-home .window-controls{position:absolute;right:24px;display:flex;gap:9px}
+.portfolio-home .window-controls i{width:10px;height:10px;border-radius:50%;background:#7795a4;box-shadow:0 0 0 4px rgba(119,149,164,.1)}
+.portfolio-home .profile-rail{position:absolute;left:26px;top:78px;bottom:84px;width:150px;border-right:1px solid rgba(190,220,233,.12);display:flex;align-items:center;flex-direction:column;padding:10px 18px}
+.portfolio-home .rail-avatar{width:94px;height:94px;padding:6px;border:1px solid #7895a4;border-radius:50%;box-shadow:0 0 0 7px rgba(126,160,178,.1)}
+.portfolio-home .rail-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%}
+.portfolio-home .rail-name{margin-top:20px;font-size:.78rem;color:#e6f0f4;white-space:nowrap}
+.portfolio-home .rail-socials{display:flex;gap:15px;margin-top:25px}
+.portfolio-home .rail-socials a{color:#b5cbd5;font-size:1.05rem}
+.portfolio-home .rail-socials a:hover{color:#fff}
+.portfolio-home .rail-caption{margin-top:16px;color:#7894a2;font-size:.58rem;letter-spacing:.18em}
+.portfolio-home .hero-copy{position:relative;z-index:3;max-width:530px;padding-top:45px}
+.portfolio-home .eyebrow,.portfolio-home .section-kicker{display:flex;align-items:center;gap:10px;color:#91aebb;font-size:.68rem;font-weight:700;letter-spacing:.2em}
+.portfolio-home .eyebrow span{width:22px;height:1px;background:#9bb9c7}
+.portfolio-home .hero-title{font-family:'Barlow Condensed',sans-serif}
+.portfolio-home .hero-copy h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(4.2rem,7.4vw,7.1rem);font-weight:800;line-height:.82;letter-spacing:-.025em;color:#f0f5f7;margin:24px 0 18px;text-shadow:0 8px 28px rgba(0,0,0,.35)}
+.portfolio-home .hero-copy h1 span{color:#8faebd}
+.portfolio-home .hero-role{font-size:1.05rem;font-weight:600;color:#d8e5eb;letter-spacing:.03em}
+.portfolio-home .hero-role b{color:#7393a3;padding:0 7px}
+.portfolio-home .hero-description{max-width:470px;margin:18px 0 25px;color:#aebfc7;font-size:.94rem;line-height:1.8}
+.portfolio-home .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.portfolio-home .interface-button{display:inline-flex;align-items:center;gap:10px;padding:12px 17px;border-radius:7px;font-size:.78rem;font-weight:700;letter-spacing:.025em;transition:background .2s,border-color .2s,transform .2s}
+.portfolio-home .interface-button:hover{transform:translateY(-2px)}
+.portfolio-home .interface-button.primary{background:#dce9ef;color:#12212a;border:1px solid #dce9ef}
+.portfolio-home .interface-button.primary:hover{background:#fff}
+.portfolio-home .interface-button.secondary{border:1px solid rgba(190,220,233,.3);color:#dce8ed}
+.portfolio-home .interface-button.secondary:hover{background:rgba(190,220,233,.1)}
+.portfolio-home .hero-portrait{position:absolute;z-index:2;right:44px;bottom:0;width:min(39%,390px);height:84%;display:flex;align-items:flex-end;justify-content:center;pointer-events:none}
+.portfolio-home .portrait-frame{position:relative;width:100%;height:100%;display:flex;align-items:flex-end;justify-content:center}
+.portfolio-home .portrait-frame:before{content:"";position:absolute;inset:15% 4% 0;border-radius:48% 48% 8px 8px;background:linear-gradient(145deg,rgba(125,164,183,.28),rgba(18,39,51,.2));border:1px solid rgba(195,223,235,.17)}
+.portfolio-home .portrait-frame img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 18px 25px rgba(0,0,0,.35));mask-image:linear-gradient(to bottom,#000 0%,#000 86%,transparent 100%)}
+.portfolio-home .portrait-index{position:absolute;right:0;bottom:28px;color:#a4bbc6;font-size:.61rem;letter-spacing:.16em}
+.portfolio-home .portrait-index i{display:inline-block;width:28px;height:1px;background:#8aa8b6;vertical-align:middle;margin:0 7px}
+.portfolio-home .system-strip{position:absolute;bottom:0;left:190px;right:32px;min-height:54px;padding:0 20px;display:flex;align-items:center;gap:25px;background:rgba(21,37,47,.9);border:1px solid rgba(181,211,225,.14);border-radius:9px 9px 0 0;color:#9fb5bf;font-size:.61rem;font-weight:700;letter-spacing:.1em}
+.portfolio-home .system-strip span{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.portfolio-home .system-strip i{color:#9ab9c8}
+.portfolio-home .system-strip .system-status{margin-left:auto;color:#b6c9d1;font-size:.55rem}
+.portfolio-home .system-status i{width:7px;height:7px;border-radius:50%;background:#83c2a5;box-shadow:0 0 10px rgba(131,194,165,.6)}
+.portfolio-home .side-instrument{position:absolute;right:-34px;top:180px;display:flex;align-items:center;flex-direction:column;gap:17px;color:#7895a4;font-size:.52rem;letter-spacing:.15em;writing-mode:vertical-rl}
+.portfolio-home .side-instrument i{font-size:2rem;color:#9bb7c4;writing-mode:horizontal-tb}
+.portfolio-home .instrument-line{height:58px;width:1px;background:rgba(167,197,210,.4)}
+.portfolio-home .scroll-cue{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:14px;color:#9ab1bd;font-size:.58rem;letter-spacing:.2em}
+.portfolio-home .scroll-cue i{font-size:.8rem}
+.portfolio-home .intro-section{padding:105px 0;background:rgba(7,14,19,.48);border-top:1px solid rgba(189,216,228,.08);border-bottom:1px solid rgba(189,216,228,.08)}
+.portfolio-home .intro-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;align-items:center}
+.portfolio-home .intro-heading h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(3.3rem,6vw,5.5rem);line-height:.9;letter-spacing:-.02em;margin:22px 0;color:#edf4f7}
+.portfolio-home .intro-heading h2 span{color:#87a9b9}
+.portfolio-home .intro-heading p{max-width:300px;color:#9fb2bc;font-size:.9rem;line-height:1.8}
+.portfolio-home .intro-panel{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:center;padding:24px;background:linear-gradient(140deg,#172832,#101b23);border:1px solid rgba(185,214,227,.14);border-radius:16px;box-shadow:0 20px 55px rgba(0,0,0,.2)}
+.portfolio-home .intro-photo{height:250px;overflow:hidden;border-radius:10px;border:1px solid rgba(191,218,230,.3)}
+.portfolio-home .intro-photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.portfolio-home .mini-label{font-size:.6rem;letter-spacing:.18em;color:#88a7b6;font-weight:700}
+.portfolio-home .intro-copy h3{font-family:'Barlow Condensed',sans-serif;font-size:2.3rem;color:#f1f5f7;margin:9px 0}
+.portfolio-home .intro-copy p{font-size:.86rem;line-height:1.85;color:#aebfc7}
+.portfolio-home .text-link{display:inline-flex;gap:10px;align-items:center;margin-top:20px;color:#dce8ed;font-size:.78rem;font-weight:700}
+.portfolio-home .text-link:hover{color:#9fc2d2}
+.portfolio-home .featured-section{padding:100px 0;background:#0d171e}
+.portfolio-home .featured-section .section-header{align-items:end}
+.portfolio-home .section-title{font-family:'Barlow Condensed',sans-serif;font-size:3.4rem;line-height:1;color:#f0f5f7;margin-top:14px}
+.portfolio-home .section-title span{color:#8eacba}
+.portfolio-home .view-all{color:#b4c8d1;font-size:.8rem}
+.portfolio-home .projects-preview{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.portfolio-home .project-card{background:#14232c;border:1px solid rgba(183,212,224,.13);border-radius:12px;box-shadow:0 16px 35px rgba(0,0,0,.18);overflow:hidden}
+.portfolio-home .project-card:hover{transform:translateY(-5px);box-shadow:0 22px 40px rgba(0,0,0,.28)}
+.portfolio-home .project-image{height:190px}
+.portfolio-home .project-image img{filter:saturate(.72);transition:transform .5s,filter .5s}
+.portfolio-home .project-card:hover .project-image img{filter:saturate(1);transform:scale(1.035)}
+.portfolio-home .project-overlay{display:none}
+.portfolio-home .project-content{padding:22px}
+.portfolio-home .project-tag{color:#8eafbf;background:transparent;padding:0;font-size:.62rem;letter-spacing:.15em}
+.portfolio-home .project-title{font-family:'Barlow Condensed',sans-serif;color:#eff5f7;font-size:1.55rem;margin:10px 0}
+.portfolio-home .project-desc{color:#a9bbc4;font-size:.82rem;line-height:1.7}
+.portfolio-home .tech-badge{background:rgba(157,190,205,.1);border:1px solid rgba(157,190,205,.14);color:#b8cbd4}
+.portfolio-home .footer{padding:45px 0 24px;background:#080f14;border-top:1px solid rgba(190,220,233,.1);color:#91a6b1}
+.portfolio-home .footer-inner{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.portfolio-home .footer-mark{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:800;letter-spacing:.08em;color:#edf4f7}
+.portfolio-home .footer-mark span{color:#8eafbf}
+.portfolio-home .footer-inner p{font-size:.75rem;margin-top:5px}
+.portfolio-home .footer-links{display:flex;justify-content:flex-end;gap:22px;align-items:center;font-size:.75rem}
+.portfolio-home .footer-links a:hover{color:#fff}
+.portfolio-home .footer-bottom{grid-column:1/-1;padding-top:20px;border-top:1px solid rgba(190,220,233,.1);display:flex;justify-content:space-between;font-size:.62rem;letter-spacing:.1em}
+.portfolio-home .back-to-top{display:none}
+@media(max-width:900px){
+ .portfolio-home .hero{min-height:auto;padding:125px 0 80px}
+ .portfolio-home .portfolio-window{min-height:650px;padding:45px 34px 80px 185px}
+ .portfolio-home .profile-rail{left:18px;width:135px}
+ .portfolio-home .hero-copy h1{font-size:clamp(3.7rem,8vw,5.5rem)}
+ .portfolio-home .hero-portrait{right:20px;width:38%;height:70%;opacity:.86}
+ .portfolio-home .system-strip{left:170px;gap:14px;flex-wrap:wrap;padding:12px 15px}
+ .portfolio-home .system-strip .system-status{display:none}
+ .portfolio-home .side-instrument{display:none}
+ .portfolio-home .intro-layout{grid-template-columns:1fr;gap:35px}
+}
+@media(max-width:640px){
+ .portfolio-home .navbar{top:10px;width:calc(100% - 24px);border-radius:18px}
+ .portfolio-home .nav-container{min-height:58px;padding:0 16px}
+ .portfolio-home .nav-toggle{display:block}
+ .portfolio-home .nav-menu{position:absolute;top:calc(100% + 9px);left:0;right:0;display:none;flex-direction:column;padding:10px;background:rgba(12,22,29,.97);border:1px solid rgba(190,220,233,.15);border-radius:15px;box-shadow:0 18px 35px rgba(0,0,0,.3)}
+ .portfolio-home .nav-menu.active{display:flex}
+ .portfolio-home .nav-menu a{display:block;padding:12px 14px}
+ .portfolio-home .hero{padding:95px 0 65px}
+ .portfolio-home .portfolio-window{min-height:0;padding:30px 20px 20px;border-radius:25px;overflow:hidden}
+ .portfolio-home .window-topline{height:40px}
+ .portfolio-home .window-label{font-size:.52rem;letter-spacing:.25em}
+ .portfolio-home .window-controls{right:15px;gap:6px}
+ .portfolio-home .window-controls i{width:7px;height:7px}
+ .portfolio-home .profile-rail{position:relative;inset:auto;width:100%;height:auto;border:0;padding:28px 0 8px;display:flex;flex-direction:row;justify-content:flex-start;gap:12px}
+ .portfolio-home .rail-avatar{width:48px;height:48px;padding:3px;box-shadow:none}
+ .portfolio-home .rail-name{margin:0;font-size:.72rem}
+ .portfolio-home .rail-socials{margin:0 0 0 auto;gap:12px}
+ .portfolio-home .rail-caption{display:none}
+ .portfolio-home .hero-copy{padding:25px 0 0}
+ .portfolio-home .eyebrow{font-size:.54rem;letter-spacing:.12em}
+ .portfolio-home .hero-copy h1{font-size:clamp(3.35rem,15vw,5.2rem);margin:17px 0 12px}
+ .portfolio-home .hero-role{font-size:.85rem}
+ .portfolio-home .hero-description{font-size:.8rem;line-height:1.7;margin:13px 0 18px;max-width:100%}
+ .portfolio-home .hero-actions{gap:8px}
+ .portfolio-home .interface-button{font-size:.68rem;padding:10px 12px}
+ .portfolio-home .hero-portrait{position:relative;right:auto;bottom:auto;width:75%;height:310px;margin:24px auto 0;opacity:1}
+ .portfolio-home .portrait-index{right:0;bottom:10px}
+ .portfolio-home .system-strip{position:relative;left:auto;right:auto;bottom:auto;margin:14px -5px -5px;padding:13px 10px;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;border-radius:8px;font-size:.53rem}
+ .portfolio-home .system-strip span{white-space:normal}
+ .portfolio-home .scroll-cue{bottom:20px;font-size:.5rem}
+ .portfolio-home .intro-section,.portfolio-home .featured-section{padding:65px 0}
+ .portfolio-home .intro-heading h2{font-size:3.7rem}
+ .portfolio-home .intro-panel{grid-template-columns:1fr;gap:18px;padding:16px}
+ .portfolio-home .intro-photo{height:260px;max-width:260px;width:100%;margin:auto}
+ .portfolio-home .intro-copy h3{font-size:2rem}
+ .portfolio-home .intro-copy p{font-size:.8rem}
+ .portfolio-home .featured-section .section-header{align-items:flex-start;flex-direction:column;gap:15px}
+ .portfolio-home .section-title{font-size:2.8rem}
+ .portfolio-home .projects-preview{grid-template-columns:1fr;gap:16px}
+ .portfolio-home .project-image{height:190px}
+ .portfolio-home .footer-inner{grid-template-columns:1fr;text-align:center}
+ .portfolio-home .footer-links{justify-content:center;flex-wrap:wrap;gap:15px}
+ .portfolio-home .footer-bottom{gap:10px;flex-direction:column;align-items:center}
+}
+@media(prefers-reduced-motion:reduce){
+ .portfolio-home *, .portfolio-home *:before, .portfolio-home *:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
