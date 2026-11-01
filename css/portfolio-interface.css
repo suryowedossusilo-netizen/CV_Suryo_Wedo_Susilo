@@ -269,3 +269,219 @@ body.portfolio-home{--ink:#080d12;--panel:#101a22;--panel-soft:#172630;--steel:#
 @media(prefers-reduced-motion:reduce){
     .portfolio-home .portfolio-window,.portfolio-home .project-card{transform:none!important;transition:none!important}
 }
+
+
+/* === MOBILE-FIRST 3D COMPOSITION — visible depth, not just translateZ === */
+.portfolio-home .hero{
+    perspective:1400px;
+    perspective-origin:50% 35%;
+}
+.portfolio-home .portfolio-window{
+    position:relative;
+    isolation:isolate;
+    transform:perspective(1400px) rotateX(2.8deg) rotateY(-1deg);
+    transform-style:preserve-3d;
+    border:1px solid rgba(194,224,238,.28);
+    box-shadow:
+        0 2px 0 rgba(221,242,250,.14),
+        0 12px 0 rgba(49,76,91,.65),
+        0 25px 0 rgba(15,29,38,.78),
+        0 48px 85px rgba(0,0,0,.62),
+        inset 0 2px 0 rgba(255,255,255,.14),
+        inset 0 -18px 35px rgba(0,0,0,.24);
+}
+.portfolio-home .portfolio-window:before{
+    inset:14px -18px -28px 18px;
+    transform:translateZ(-45px) rotateX(-1deg);
+    background:linear-gradient(145deg,#344f5d 0%,#172b36 35%,#071017 100%);
+    border:1px solid rgba(181,216,232,.26);
+    box-shadow:0 35px 55px rgba(0,0,0,.52),inset 0 1px rgba(255,255,255,.16);
+}
+.portfolio-home .portfolio-window:after{
+    background:
+      linear-gradient(115deg,rgba(225,246,255,.13),transparent 22%),
+      linear-gradient(0deg,rgba(92,143,166,.09),transparent 28%);
+    box-shadow:inset 0 0 0 1px rgba(211,237,247,.08);
+}
+.portfolio-home .profile-rail{
+    border:1px solid rgba(184,218,232,.22);
+    background:linear-gradient(145deg,rgba(54,79,93,.82),rgba(8,17,23,.94));
+    box-shadow:0 10px 0 rgba(5,12,17,.5),0 24px 35px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.16);
+}
+.portfolio-home .rail-avatar{
+    border:2px solid rgba(194,225,239,.8);
+    box-shadow:0 0 0 7px rgba(126,160,178,.12),0 10px 0 rgba(4,11,16,.65),0 18px 30px rgba(0,0,0,.42);
+}
+.portfolio-home .hero-copy{
+    text-shadow:0 1px 1px rgba(0,0,0,.18);
+}
+.portfolio-home .hero-copy h1{
+    text-shadow:0 2px 0 #718d9b,0 5px 0 rgba(7,14,19,.9),0 14px 25px rgba(0,0,0,.58);
+}
+.portfolio-home .hero-portrait{
+    transform-style:preserve-3d;
+    filter:drop-shadow(18px 28px 20px rgba(0,0,0,.55));
+    animation:portrait-hover 6s ease-in-out infinite;
+}
+.portfolio-home .portrait-frame{
+    position:relative;
+    border:1px solid rgba(206,231,242,.35);
+    border-radius:20px 20px 12px 12px;
+    background:linear-gradient(145deg,rgba(177,211,226,.24),rgba(10,24,33,.82));
+    padding:8px;
+    box-shadow:
+      0 3px 0 rgba(205,231,242,.22),
+      0 10px 0 rgba(45,72,86,.72),
+      0 20px 35px rgba(0,0,0,.48),
+      inset 0 1px rgba(255,255,255,.25);
+    transform:rotateY(-5deg) rotateX(2deg) translateZ(45px);
+}
+.portfolio-home .portrait-frame:before{
+    inset:8% 3% -5%;
+    border-radius:48% 48% 10px 10px;
+    background:radial-gradient(ellipse at 50% 20%,rgba(159,205,224,.38),rgba(40,72,89,.16) 54%,transparent 75%);
+    transform:translateZ(-32px);
+}
+.portfolio-home .portrait-frame img{
+    border-radius:13px 13px 7px 7px;
+    object-fit:cover;
+    object-position:center 38%;
+    filter:saturate(.82) contrast(1.04) drop-shadow(0 16px 17px rgba(0,0,0,.4));
+}
+.portfolio-home .portrait-index{
+    z-index:4;
+    padding:8px 12px;
+    border:1px solid rgba(190,221,235,.25);
+    border-radius:30px;
+    background:linear-gradient(145deg,rgba(35,59,72,.96),rgba(8,17,23,.96));
+    box-shadow:0 8px 20px rgba(0,0,0,.38);
+}
+.portfolio-home .system-strip{
+    border:1px solid rgba(187,218,232,.22);
+    box-shadow:0 8px 0 rgba(4,11,16,.58),0 20px 30px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.14);
+}
+.portfolio-home .interface-button{
+    transform:translateZ(25px);
+    transition:transform .25s ease,box-shadow .25s ease;
+}
+.portfolio-home .interface-button.primary{
+    box-shadow:0 5px 0 #7796a5,0 13px 24px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.95);
+}
+.portfolio-home .interface-button.secondary{
+    box-shadow:0 5px 0 rgba(2,8,12,.7),0 13px 24px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.1);
+}
+.portfolio-home .intro-panel,.portfolio-home .project-card{
+    border:1px solid rgba(187,218,232,.2);
+    box-shadow:0 7px 0 rgba(4,11,16,.65),0 24px 45px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.13);
+}
+@keyframes portrait-hover{
+    0%,100%{transform:translateY(0) translateZ(70px)}
+    50%{transform:translateY(-9px) translateZ(70px)}
+}
+@media(max-width:900px){
+    .portfolio-home .portfolio-window{transform:perspective(1200px) rotateX(1.8deg)}
+    .portfolio-home .hero-portrait{transform:translateZ(60px)}
+}
+@media(max-width:640px){
+    .portfolio-home .hero{perspective:1100px;perspective-origin:50% 30%;overflow:visible}
+    .portfolio-home .interface-shell{overflow:visible}
+    .portfolio-home .portfolio-window{
+        overflow:visible;
+        transform:perspective(1100px) rotateX(1.8deg);
+        transform-style:preserve-3d;
+        margin:0 5px 28px;
+        padding:30px 20px 22px;
+        border-radius:25px;
+        box-shadow:
+          0 2px 0 rgba(221,242,250,.16),
+          0 8px 0 rgba(57,83,97,.78),
+          0 17px 0 rgba(10,22,30,.88),
+          0 32px 50px rgba(0,0,0,.58),
+          inset 0 1px rgba(255,255,255,.15);
+    }
+    .portfolio-home .portfolio-window:before{
+        inset:12px -9px -18px 9px;
+        transform:translateZ(-28px);
+        border-radius:25px;
+    }
+    .portfolio-home .profile-rail{
+        transform:translateZ(25px);
+        border-radius:16px;
+        padding:10px 12px;
+        margin:10px -5px 0;
+        width:calc(100% + 10px);
+        min-height:70px;
+        box-shadow:0 5px 0 rgba(4,11,16,.55),0 14px 24px rgba(0,0,0,.3),inset 0 1px rgba(255,255,255,.13);
+    }
+    .portfolio-home .rail-avatar{width:50px;height:50px}
+    .portfolio-home .hero-copy{
+        transform:translateZ(35px);
+        position:relative;
+        z-index:3;
+        padding:25px 0 0;
+    }
+    .portfolio-home .hero-copy h1{
+        font-size:clamp(3.1rem,14vw,4.6rem);
+        line-height:.86;
+        text-shadow:0 2px 0 #718d9b,0 4px 0 rgba(7,14,19,.9),0 10px 20px rgba(0,0,0,.58);
+    }
+    .portfolio-home .hero-portrait{
+        position:relative;
+        right:auto;
+        bottom:auto;
+        z-index:2;
+        width:min(88%,340px);
+        height:340px;
+        margin:34px auto 16px;
+        opacity:1;
+        transform-style:preserve-3d;
+        animation:portrait-hover-mobile 6s ease-in-out infinite;
+        filter:drop-shadow(12px 20px 17px rgba(0,0,0,.5));
+    }
+    .portfolio-home .portrait-frame{
+        height:100%;
+        padding:7px;
+        border-radius:18px;
+        transform:perspective(900px) rotateY(-5deg) rotateX(2deg) translateZ(42px);
+    }
+    .portfolio-home .portrait-frame img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position:center 42%;
+        border-radius:12px;
+    }
+    .portfolio-home .portrait-frame:before{
+        inset:7% -5% -5% 7%;
+        transform:translateZ(-28px) rotateY(5deg);
+    }
+    .portfolio-home .portrait-index{right:-10px;bottom:8px}
+    .portfolio-home .system-strip{
+        transform:translateZ(32px);
+        position:relative;
+        left:auto;right:auto;bottom:auto;
+        margin:18px -5px -5px;
+        padding:14px 12px;
+        min-height:0;
+        border-radius:12px;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:13px;
+    }
+    .portfolio-home .interface-button{transform:translateZ(18px)}
+    .portfolio-home .intro-panel{
+        transform:perspective(900px) rotateY(-1.5deg) rotateX(1deg);
+        box-shadow:0 6px 0 rgba(4,11,16,.65),0 20px 35px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.13);
+    }
+    .portfolio-home .intro-photo{transform:translateZ(18px)}
+    .portfolio-home .project-card{transform:perspective(850px) rotateX(1.5deg)}
+    .portfolio-home .project-card:hover{transform:perspective(850px) rotateX(0) translateY(-4px)}
+    .portfolio-home .scroll-cue{position:relative;bottom:auto;margin:10px auto 0;width:max-content}
+}
+@keyframes portrait-hover-mobile{
+    0%,100%{transform:translateY(0) translateZ(38px)}
+    50%{transform:translateY(-7px) translateZ(38px)}
+}
+@media(prefers-reduced-motion:reduce){
+    .portfolio-home .hero-portrait{animation:none!important}
+}
