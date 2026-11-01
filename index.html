@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101a22">
+    <meta name="description" content="Suryo Wedo Susilo — IT Support, teknologi, dan portofolio pribadi.">
     <title>Home | Suryo Wedo Susilo</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/portfolio-interface.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <base target="_self">
 </head>
-<body>
-    <nav class="navbar scrolled" id="navbar">
+<body class="portfolio-home">
+    <div class="interface-backdrop" aria-hidden="true"></div>
+
+    <nav class="navbar scrolled" id="navbar" aria-label="Navigasi utama">
         <div class="container nav-container">
-            <a href="index.html" class="logo">SW<span class="highlight">S</span></a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <a href="index.html" class="logo" aria-label="Suryo Wedo Susilo, beranda">S<span>W</span>S</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Buka navigasi" aria-expanded="false" aria-controls="navMenu">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-menu" id="navMenu">
@@ -26,142 +31,124 @@
             </ul>
         </div>
     </nav>
-    <section class="hero" id="home">
-        <div class="hero-bg" aria-hidden="true"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="greeting">Halo! Saya <span class="highlight">Suryo Wedo Susilo</span></p>
-                    <h1 class="hero-title">IT Support & <span class="highlight">Digital Enthusiast</span></h1>
-                    <p class="hero-subtitle" id="typingText">IT Support</p>
-                    <p class="hero-description">
-                        Saya membantu organisasi/instansi dalam instalasi, konfigurasi, troubleshooting perangkat keras & lunak,
-                        serta mendukung kelancaran operasional melalui pengelolaan IT yang rapi dan efektif.
-                    </p>
 
-                    <div class="hero-buttons">
-                        <a href="projects.html" class="btn btn-primary"><i class="fas fa-folder-open"></i> Lihat Portofolio</a>
-                        <a href="contact.html" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Kontak Saya</a>
+    <main>
+        <section class="hero" id="home">
+            <div class="container interface-shell">
+                <div class="portfolio-window">
+                    <div class="window-topline">
+                        <span class="window-label">PORTOFOLIO PRIBADI</span>
+                        <div class="window-controls" aria-hidden="true"><i></i><i></i><i></i></div>
                     </div>
 
-                    <div class="social-links">
-                        <a class="social-link" href="https://github.com/suryowedossusilo-netizen" target="_self" rel="noopener noreferrer" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a class="social-link" href="https://www.linkedin.com/in/suryo-wedo-susilo" target="_self" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a class="social-link" href="https://www.instagram.com/Vruimte_" target="_self" rel="noopener noreferrer" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                    <aside class="profile-rail" aria-label="Profil dan media sosial">
+                        <div class="rail-avatar"><img src="assets/images/profil2.jpg" alt="Foto profil Suryo Wedo Susilo"></div>
+                        <span class="rail-name">Suryo Wedo</span>
+                        <div class="rail-socials">
+                            <a href="https://github.com/suryowedossusilo-netizen" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/suryo-wedo-susilo" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/Vruimte_" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <span class="rail-caption">IT SUPPORT</span>
+                    </aside>
+
+                    <div class="hero-copy">
+                        <p class="eyebrow"><span></span> TEKNOLOGI · SUPPORT · SOLUSI</p>
+                        <h1>SURYO WEDO<br><span>SUSILO</span></h1>
+                        <p class="hero-role">IT Support <b>/</b> Digital Enthusiast</p>
+                        <p class="hero-description">Saya berfokus pada dukungan operasional IT, instalasi dan konfigurasi perangkat, infrastruktur jaringan, serta troubleshooting untuk membantu teknologi bekerja sebagaimana mestinya.</p>
+                        <div class="hero-actions">
+                            <a href="projects.html" class="interface-button primary"><i class="fas fa-arrow-up-right-from-square"></i> Lihat Portofolio</a>
+                            <a href="contact.html" class="interface-button secondary">Hubungi Saya <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="hero-portrait">
+                        <div class="portrait-frame">
+                            <img src="assets/images/profil2.jpg" alt="Suryo Wedo Susilo" fetchpriority="high">
+                        </div>
+                        <span class="portrait-index">01 <i></i> PROFILE</span>
+                    </div>
+
+                    <div class="system-strip" aria-label="Bidang fokus">
+                        <span><i class="fas fa-network-wired"></i> NETWORK</span>
+                        <span><i class="fas fa-server"></i> SYSTEM</span>
+                        <span><i class="fas fa-screwdriver-wrench"></i> TROUBLESHOOTING</span>
+                        <span class="system-status"><i></i> AVAILABLE TO CONNECT</span>
                     </div>
                 </div>
 
-                <div class="hero-image">
-                    <div class="image-wrapper">
-                        <img src="assets/images/profil2.jpg" alt="Profil">
-                        <div class="image-border" aria-hidden="true"></div>
+                <div class="side-instrument" aria-hidden="true">
+                    <span>INTERFACE / 001</span>
+                    <div class="instrument-line"></div>
+                    <i class="fas fa-fingerprint"></i>
+                    <span>EST. WITH PURPOSE</span>
+                </div>
+                <a class="scroll-cue" href="#featured"><span>SCROLL TO EXPLORE</span><i class="fas fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <section class="intro-section" id="intro">
+            <div class="container intro-layout">
+                <div class="intro-heading">
+                    <span class="section-kicker">01 / PERKENALAN</span>
+                    <h2>BEHIND THE<br><span>INTERFACE.</span></h2>
+                    <p>Teknologi yang baik terasa sederhana ketika semuanya bekerja dengan tepat.</p>
+                </div>
+                <div class="intro-panel">
+                    <div class="intro-photo"><img src="assets/images/profil2.jpg" alt="Potret Suryo Wedo Susilo"></div>
+                    <div class="intro-copy">
+                        <span class="mini-label">SEDIKIT TENTANG SAYA</span>
+                        <h3>Halo, saya Suryo.</h3>
+                        <p>Saya memiliki pengalaman di bidang IT Support, mulai dari penyiapan komputer klien, instalasi server pendukung SAP, infrastruktur jaringan fiber optik, hingga penanganan kendala perangkat keras dan lunak. Saat ini saya juga terus mengembangkan kemampuan di bidang teknologi melalui studi Teknik Informatika.</p>
+                        <a href="about.html" class="text-link">Kenali saya lebih jauh <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="scroll-indicator">
-                <a href="#featured" title="Scroll to featured projects"><i class="fas fa-chevron-down"></i></a>
+        <section class="featured-section" id="featured">
+            <div class="container">
+                <div class="section-header">
+                    <div><span class="section-kicker">02 / SELECTED WORK</span><h2 class="section-title">PROJECT <span>UNG GULAN.</span></h2></div>
+                    <a class="view-all" href="projects.html"><span>Lihat Semua Proyek</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="projects-preview" id="featuredProjects">
+                    <article class="project-card" data-category="web">
+                        <div class="project-image"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="Ilustrasi pengembangan dan tugas pemrograman" loading="lazy"></div>
+                        <div class="project-content"><span class="project-tag">01 / WEB</span><h3 class="project-title">TUGAS KULIAH</h3><p class="project-desc">Kumpulan tugas akademik dan latihan pemrograman.</p><div class="project-tech"><span class="tech-badge">Python</span><span class="tech-badge">Django</span><span class="tech-badge">HTML</span></div></div>
+                    </article>
+                    <article class="project-card" data-category="web">
+                        <div class="project-image"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="Ilustrasi website personal branding" loading="lazy"></div>
+                        <div class="project-content"><span class="project-tag">02 / WEB</span><h3 class="project-title">PERSONAL WEBSITE</h3><p class="project-desc">Website personal branding dengan fitur interaktif dan desain responsif.</p><div class="project-tech"><span class="tech-badge">JavaScript</span><span class="tech-badge">CSS</span><span class="tech-badge">HTML5</span></div></div>
+                    </article>
+                    <article class="project-card" data-category="aplikasi">
+                        <div class="project-image"><img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80" alt="Ilustrasi kegiatan olahraga dan event" loading="lazy"></div>
+                        <div class="project-content"><span class="project-tag">03 / EVENT</span><h3 class="project-title">UWP FUNRUN</h3><p class="project-desc">Proyek event fun run yang dikembangkan bersama lingkungan kampus.</p><div class="project-tech"><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span><span class="tech-badge">JavaScript</span></div></div>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="featured-section" id="featured">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Project <span class="highlight">Unggulan</span></h2>
-                <a class="view-all" href="projects.html"><span>Lihat Semua</span><i class="fas fa-arrow-right"></i></a>
-            </div>
+        </section>
+    </main>
 
-            <div class="projects-preview" id="featuredProjects">
-                <article class="project-card" data-category="web">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" alt="Tugas Kuliah">
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">Web</span>
-                        <h3 class="project-title">TUGAS KULIAH</h3>
-                        <p class="project-desc">Kumpulan tugas akademik dan latihan pemrograman.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">Django</span>
-                            <span class="tech-badge">HTML</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="project-card" data-category="web">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="Personal Branding">
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">Web</span>
-                        <h3 class="project-title">SuryoWedossusilo Netizen</h3>
-                        <p class="project-desc">Repository personal branding dengan fitur interaktif dan desain modern.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">JavaScript</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">HTML5</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="project-card" data-category="aplikasi">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80" alt="UWP Funrun">
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">Aplikasi</span>
-                        <h3 class="project-title">UWP Funrun</h3>
-                        <p class="project-desc">Aplikasi event fun run dengan fokus pada teknologi frontend modern.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">HTML</span>
-                            <span class="tech-badge">CSS</span>
-                            <span class="tech-badge">JavaScript</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="logo">SW<span class="highlight">S</span></span>
-                    <p>IT Support Profesional & Digital Enthusiast</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">Tentang</a>
-                    <a href="projects.html">Portofolio</a>
-                    <a href="contact.html">Kontak</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/suryowedossusilo-netizen" target="_self" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/suryo-wedo-susilo" target="_self" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.instagram.com/Vruimte_" target="_self" rel="noopener noreferrer" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Suryo Wedo Susilo. All rights reserved.</p>
-            </div>
+        <div class="container footer-inner">
+            <div><span class="footer-mark">SWS<span>.</span></span><p>IT Support · Surabaya, Indonesia</p></div>
+            <div class="footer-links"><a href="index.html">Home</a><a href="about.html">Tentang</a><a href="projects.html">Portofolio</a><a href="contact.html">Kontak</a></div>
+            <div class="footer-bottom"><span>© 2026 Suryo Wedo Susilo</span><span>BUILT WITH INTENTION.</span></div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/animation.js"></script>
+    <script>
+        const menuButton = document.getElementById('navToggle');
+        const menu = document.getElementById('navMenu');
+        if (menuButton && menu) {
+            menuButton.addEventListener('click', () => {
+                menuButton.setAttribute('aria-expanded', menu.classList.contains('active') ? 'false' : 'true');
+            });
+        }
+    </script>
 </body>
 </html>
-
