@@ -156,3 +156,116 @@ body.portfolio-home{--ink:#080d12;--panel:#101a22;--panel-soft:#172630;--steel:#
 @media(prefers-reduced-motion:reduce){
  .portfolio-home *, .portfolio-home *:before, .portfolio-home *:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* === 3D DEPTH PASS: layered surfaces, perspective and foreground portrait === */
+.portfolio-home .hero{
+    perspective:1600px;
+    perspective-origin:50% 42%;
+    isolation:isolate;
+}
+.portfolio-home .interface-shell{transform-style:preserve-3d}
+.portfolio-home .portfolio-window{
+    transform-style:preserve-3d;
+    transform:rotateX(2deg) rotateY(-1.5deg);
+    box-shadow:
+        0 55px 100px rgba(0,0,0,.55),
+        0 18px 35px rgba(0,0,0,.38),
+        inset 0 1px 0 rgba(255,255,255,.13),
+        inset 0 -1px 0 rgba(111,157,178,.12);
+    transition:transform .65s cubic-bezier(.2,.75,.25,1),box-shadow .65s ease;
+}
+.portfolio-home .portfolio-window:before{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    inset:18px -15px -18px 15px;
+    border-radius:inherit;
+    background:linear-gradient(145deg,rgba(120,165,187,.2),rgba(18,37,49,.05) 42%,rgba(0,0,0,.58));
+    border:1px solid rgba(184,218,232,.12);
+    transform:translateZ(-55px);
+    filter:blur(1px);
+    box-shadow:0 35px 55px rgba(0,0,0,.35);
+}
+.portfolio-home .portfolio-window:after{
+    content:"";
+    position:absolute;
+    pointer-events:none;
+    inset:0;
+    border-radius:inherit;
+    background:linear-gradient(118deg,rgba(225,245,255,.11),transparent 18%,transparent 68%,rgba(118,166,189,.09));
+    transform:translateZ(3px);
+}
+.portfolio-home .window-topline{transform:translateZ(28px);background:linear-gradient(90deg,rgba(180,215,231,.04),rgba(180,215,231,.12),rgba(180,215,231,.04))}
+.portfolio-home .profile-rail{
+    transform:translateZ(35px);
+    background:linear-gradient(145deg,rgba(28,49,62,.72),rgba(7,13,18,.3));
+    border-radius:18px;
+    box-shadow:12px 18px 35px rgba(0,0,0,.24),inset 1px 1px rgba(255,255,255,.08);
+}
+.portfolio-home .rail-avatar{box-shadow:0 0 0 7px rgba(126,160,178,.1),0 14px 28px rgba(0,0,0,.4),inset 0 0 0 2px rgba(255,255,255,.35)}
+.portfolio-home .hero-copy{transform:translateZ(48px)}
+.portfolio-home .hero-copy h1{text-shadow:0 3px 0 rgba(90,120,135,.35),0 12px 26px rgba(0,0,0,.5),0 0 35px rgba(142,184,204,.12)}
+.portfolio-home .hero-portrait{
+    transform:translateZ(115px) rotateY(-3deg);
+    filter:drop-shadow(18px 24px 22px rgba(0,0,0,.48));
+}
+.portfolio-home .portrait-frame:before{
+    transform:translateZ(-25px) rotateY(7deg);
+    box-shadow:0 0 55px rgba(119,169,192,.17),inset 0 0 35px rgba(173,213,231,.12);
+}
+.portfolio-home .portrait-frame img{
+    filter:drop-shadow(0 24px 26px rgba(0,0,0,.48)) drop-shadow(0 0 22px rgba(131,177,198,.12));
+}
+.portfolio-home .system-strip{
+    transform:translateZ(52px);
+    box-shadow:0 18px 32px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.1),inset 0 -1px rgba(0,0,0,.35);
+    background:linear-gradient(110deg,rgba(28,48,60,.97),rgba(11,20,27,.98));
+}
+.portfolio-home .side-instrument{transform:translateZ(65px)}
+.portfolio-home .interface-button{box-shadow:0 7px 0 rgba(0,0,0,.22),0 12px 22px rgba(0,0,0,.2)}
+.portfolio-home .interface-button.primary{box-shadow:0 5px 0 #8ca7b5,0 12px 25px rgba(0,0,0,.32),inset 0 1px rgba(255,255,255,.9)}
+.portfolio-home .intro-panel{
+    transform:perspective(1100px) rotateY(-2deg) rotateX(1deg);
+    transform-style:preserve-3d;
+    box-shadow:0 32px 65px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.12);
+}
+.portfolio-home .intro-photo{transform:translateZ(24px);box-shadow:12px 18px 28px rgba(0,0,0,.32)}
+.portfolio-home .intro-copy{transform:translateZ(16px)}
+.portfolio-home .project-card{
+    transform:perspective(900px) rotateX(1deg) translateZ(0);
+    box-shadow:0 22px 38px rgba(0,0,0,.32),inset 0 1px rgba(255,255,255,.08);
+    transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;
+}
+.portfolio-home .project-card:hover{
+    transform:perspective(900px) rotateX(-2deg) rotateY(-1deg) translateY(-8px) translateZ(18px);
+    box-shadow:0 35px 55px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.12);
+    border-color:rgba(176,214,231,.32);
+}
+.portfolio-home .navbar{transform:translateX(-50%) translateZ(70px);box-shadow:0 18px 45px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.12)}
+.portfolio-home .intro-section,.portfolio-home .featured-section{perspective:1200px}
+.portfolio-home .interface-backdrop:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(ellipse at 48% 42%,rgba(137,186,207,.16),transparent 43%);
+    filter:blur(30px);
+}
+@media(max-width:900px){
+    .portfolio-home .portfolio-window{transform:rotateX(1deg)}
+    .portfolio-home .hero-portrait{transform:translateZ(70px)}
+}
+@media(max-width:640px){
+    .portfolio-home .hero{perspective:1000px}
+    .portfolio-home .portfolio-window{transform:none;transform-style:preserve-3d}
+    .portfolio-home .portfolio-window:before{inset:10px -5px -10px 5px;transform:translateZ(-25px)}
+    .portfolio-home .profile-rail{transform:translateZ(14px)}
+    .portfolio-home .hero-copy{transform:translateZ(20px)}
+    .portfolio-home .hero-portrait{transform:translateZ(42px)}
+    .portfolio-home .system-strip{transform:translateZ(18px)}
+    .portfolio-home .intro-panel{transform:none}
+    .portfolio-home .intro-photo,.portfolio-home .intro-copy{transform:none}
+    .portfolio-home .project-card,.portfolio-home .project-card:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+    .portfolio-home .portfolio-window,.portfolio-home .project-card{transform:none!important;transition:none!important}
+}
