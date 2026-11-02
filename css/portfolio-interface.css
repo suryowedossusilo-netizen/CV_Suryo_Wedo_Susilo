@@ -651,3 +651,16 @@ body.portfolio-home{--ink:#080d12;--panel:#101a22;--panel-soft:#172630;--steel:#
         line-height:1.4;
     }
 }
+
+
+/* Fine horizontal adjustment for the mobile profile rail */
+@media(max-width:640px){
+    .portfolio-home .portfolio-window .profile-rail{
+        transform:translateX(-12px);
+    }
+}
+@media(max-width:360px){
+    .portfolio-home .portfolio-window .profile-rail{
+        transform:translateX(-7px);
+    }
+}
