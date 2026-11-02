@@ -1,0 +1,197 @@
+/* Inner pages — visual language aligned with the Home interface */
+body:not(.portfolio-home){
+  --page-bg:#0b141b;--page-panel:#101e27;--page-panel-2:#172832;
+  --page-border:rgba(188,215,226,.15);--page-text:#edf4f7;
+  --page-muted:#aebfc7;--page-accent:#8faebd;
+  background:radial-gradient(ellipse at 12% 12%,rgba(73,125,150,.24),transparent 34%),
+    radial-gradient(ellipse at 88% 72%,rgba(81,119,137,.16),transparent 35%),
+    linear-gradient(135deg,#172c38,#0b151c 58%,#203746);
+  color:var(--page-text);font-family:'DM Sans',sans-serif;
+}
+body:not(.portfolio-home) .navbar{
+  top:20px;left:50%;right:auto;transform:translateX(-50%);
+  width:min(1120px,calc(100% - 48px));padding:0;
+  background:rgba(13,22,29,.9);border:1px solid var(--page-border);
+  border-radius:50px;box-shadow:0 14px 40px rgba(0,0,0,.3);
+  backdrop-filter:blur(18px);
+}
+body:not(.portfolio-home) .navbar.scrolled{padding:0;background:rgba(13,22,29,.9)}
+body:not(.portfolio-home) .navbar .container{min-height:66px;padding:0 24px}
+body:not(.portfolio-home) .logo{
+  color:#eaf3f7;font-family:'Barlow Condensed',sans-serif;
+  font-size:1.65rem;letter-spacing:2px;font-weight:700;
+}
+body:not(.portfolio-home) .logo .highlight{color:#86a9ba}
+body:not(.portfolio-home) .nav-menu{gap:4px}
+body:not(.portfolio-home) .nav-menu a{
+  color:#c3d0d7;font-size:.84rem;letter-spacing:.09em;
+  text-transform:uppercase;padding:10px 15px;border-radius:30px;
+}
+body:not(.portfolio-home) .nav-menu a:hover,
+body:not(.portfolio-home) .nav-menu a.active{color:#fff;background:rgba(170,202,218,.13)}
+body:not(.portfolio-home) .nav-toggle{color:#e8f1f5}
+body:not(.portfolio-home) .page-hero{
+  padding:158px 0 58px;min-height:310px;text-align:left;
+  background:transparent;position:relative;overflow:hidden;
+}
+body:not(.portfolio-home) .page-hero:after{
+  content:"";position:absolute;left:max(2rem,calc((100% - 1120px)/2));
+  bottom:34px;width:64px;height:2px;background:#8faebd;
+}
+body:not(.portfolio-home) .page-title{
+  color:#f0f5f7;font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(3.2rem,6vw,5.2rem);font-weight:800;
+  line-height:.95;letter-spacing:-.02em;margin:0 0 14px;
+}
+body:not(.portfolio-home) .page-title .highlight{color:#8faebd}
+body:not(.portfolio-home) .page-subtitle{
+  color:#aebfc7;font-size:.98rem;line-height:1.7;max-width:620px;
+}
+body:not(.portfolio-home) .about-section,
+body:not(.portfolio-home) .projects-section,
+body:not(.portfolio-home) .contact-section,
+body:not(.portfolio-home) .experience-section,
+body:not(.portfolio-home) .education-section,
+body:not(.portfolio-home) .skills-dashboard-section{
+  background:transparent;color:var(--page-text);
+}
+body:not(.portfolio-home) .about-section,
+body:not(.portfolio-home) .projects-section,
+body:not(.portfolio-home) .contact-section{padding:30px 0 100px}
+body:not(.portfolio-home) .about-grid,
+body:not(.portfolio-home) .contact-grid{gap:34px;align-items:stretch}
+body:not(.portfolio-home) .about-image,
+body:not(.portfolio-home) .about-content,
+body:not(.portfolio-home) .dashboard-card,
+body:not(.portfolio-home) .skill-card,
+body:not(.portfolio-home) .contact-info,
+body:not(.portfolio-home) .contact-form-wrapper,
+body:not(.portfolio-home) .project-card,
+body:not(.portfolio-home) .experience-card,
+body:not(.portfolio-home) .education-card{
+  background:linear-gradient(145deg,rgba(20,38,49,.96),rgba(12,25,33,.96));
+  color:var(--page-text);border:1px solid var(--page-border);
+  border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.22);
+}
+body:not(.portfolio-home) .about-content,
+body:not(.portfolio-home) .contact-info,
+body:not(.portfolio-home) .contact-form-wrapper{padding:30px}
+body:not(.portfolio-home) .about-content h2,
+body:not(.portfolio-home) .contact-info h2,
+body:not(.portfolio-home) .section-title,
+body:not(.portfolio-home) .card-title,
+body:not(.portfolio-home) .experience-section h2,
+body:not(.portfolio-home) .education-section h2{
+  color:#edf4f7;font-family:'Barlow Condensed',sans-serif;
+}
+body:not(.portfolio-home) .about-role,
+body:not(.portfolio-home) .section-subtitle,
+body:not(.portfolio-home) .about-text,
+body:not(.portfolio-home) .contact-info p,
+body:not(.portfolio-home) .experience-section p,
+body:not(.portfolio-home) .education-section p{color:var(--page-muted)}
+body:not(.portfolio-home) .about-image{overflow:hidden}
+body:not(.portfolio-home) .about-image img{width:100%;height:100%;object-fit:cover;object-position:center 28%}
+body:not(.portfolio-home) .experience-badge{background:#172d39;color:#edf4f7;border:1px solid var(--page-border)}
+body:not(.portfolio-home) .personal-info .info-item{border-color:var(--page-border)}
+body:not(.portfolio-home) .personal-info .label{color:#8faebd}
+body:not(.portfolio-home) .personal-info .value{color:#e5eef2}
+body:not(.portfolio-home) .about-buttons .btn,
+body:not(.portfolio-home) .btn-primary{
+  background:#dce9ef;color:#12212a;border:1px solid #dce9ef;
+  box-shadow:none;border-radius:7px;
+}
+body:not(.portfolio-home) .about-buttons .btn:hover,
+body:not(.portfolio-home) .btn-primary:hover{background:#fff;color:#12212a}
+body:not(.portfolio-home) .btn-black,
+body:not(.portfolio-home) .btn-outline{
+  background:transparent;color:#dce8ed;border:1px solid rgba(190,220,233,.3);
+  border-radius:7px;
+}
+body:not(.portfolio-home) .btn-black:hover,
+body:not(.portfolio-home) .btn-outline:hover{background:rgba(190,220,233,.1);color:#fff}
+body:not(.portfolio-home) .skills-dashboard-section{padding:70px 0}
+body:not(.portfolio-home) .skills-dashboard-section .section-header{text-align:left}
+body:not(.portfolio-home) .skills-dashboard-section .section-title{font-size:3rem;margin-bottom:8px}
+body:not(.portfolio-home) .skills-dashboard-section .section-subtitle{color:var(--page-muted)}
+body:not(.portfolio-home) .dashboard-grid,
+body:not(.portfolio-home) .skills-grid{gap:22px}
+body:not(.portfolio-home) .dashboard-card,
+body:not(.portfolio-home) .skill-card{padding:26px}
+body:not(.portfolio-home) .dashboard-card h3,
+body:not(.portfolio-home) .skill-card h3,
+body:not(.portfolio-home) .skill-bar-header span:first-child{color:#eaf2f5}
+body:not(.portfolio-home) .skill-bar-container{background:#263b47}
+body:not(.portfolio-home) .skill-fill{background:linear-gradient(90deg,#7799aa,#b4cbd6)}
+body:not(.portfolio-home) .skill-percentage{color:#a8c1cd}
+body:not(.portfolio-home) .experience-section,
+body:not(.portfolio-home) .education-section{padding:70px 0}
+body:not(.portfolio-home) .experience-section .container,
+body:not(.portfolio-home) .education-section .container{color:var(--page-text)}
+body:not(.portfolio-home) .filter-container{gap:10px;margin-bottom:32px}
+body:not(.portfolio-home) .filter-btn{
+  color:#b9cbd3;background:rgba(17,32,42,.8);
+  border:1px solid var(--page-border);border-radius:7px;padding:10px 18px;
+}
+body:not(.portfolio-home) .filter-btn.active,
+body:not(.portfolio-home) .filter-btn:hover{background:#dce9ef;color:#12212a;border-color:#dce9ef}
+body:not(.portfolio-home) .projects-grid{gap:24px}
+body:not(.portfolio-home) .project-card{overflow:hidden;transition:transform .25s,border-color .25s}
+body:not(.portfolio-home) .project-card:hover{transform:translateY(-5px);border-color:rgba(190,220,233,.34)}
+body:not(.portfolio-home) .project-content{background:transparent;padding:24px}
+body:not(.portfolio-home) .project-title,
+body:not(.portfolio-home) .project-category-text{color:#edf4f7}
+body:not(.portfolio-home) .project-description,
+body:not(.portfolio-home) .feature-item,
+body:not(.portfolio-home) .project-stats{color:var(--page-muted)}
+body:not(.portfolio-home) .tech-tag{background:#203744;color:#c7d8df;border:1px solid var(--page-border)}
+body:not(.portfolio-home) .project-link{color:#dce9ef}
+body:not(.portfolio-home) .project-link:hover{color:#9fc2d2}
+body:not(.portfolio-home) .contact-item{border-color:var(--page-border)}
+body:not(.portfolio-home) .contact-icon,
+body:not(.portfolio-home) .social-icon{background:#203744;color:#c5d8e0;border:1px solid var(--page-border)}
+body:not(.portfolio-home) .contact-detail h4{color:#eaf2f5}
+body:not(.portfolio-home) .contact-detail a{color:#a9c3d1}
+body:not(.portfolio-home) .form-group label{color:#dce8ed}
+body:not(.portfolio-home) .form-group input,
+body:not(.portfolio-home) .form-group textarea,
+body:not(.portfolio-home) .form-group select{
+  background:#0d1a22;color:#edf4f7;border:1px solid rgba(188,215,226,.2);
+  border-radius:7px;
+}
+body:not(.portfolio-home) .form-group input:focus,
+body:not(.portfolio-home) .form-group textarea:focus,
+body:not(.portfolio-home) .form-group select:focus{border-color:#8faebd;outline:none;box-shadow:0 0 0 3px rgba(143,174,189,.12)}
+body:not(.portfolio-home) .form-group input::placeholder,
+body:not(.portfolio-home) .form-group textarea::placeholder{color:#748b97}
+body:not(.portfolio-home) .footer{
+  background:#09131a;color:#aebfc7;border-top:1px solid var(--page-border);
+}
+body:not(.portfolio-home) .footer-brand h3,
+body:not(.portfolio-home) .footer h4{color:#edf4f7}
+body:not(.portfolio-home) .footer a{color:#aebfc7}
+body:not(.portfolio-home) .footer a:hover{color:#fff}
+body:not(.portfolio-home) .footer-bottom{border-color:var(--page-border)}
+@media(max-width:768px){
+  body:not(.portfolio-home) .navbar{top:10px;width:calc(100% - 24px)}
+  body:not(.portfolio-home) .navbar .container{min-height:58px;padding:0 18px}
+  body:not(.portfolio-home) .page-hero{padding:125px 0 44px;min-height:250px}
+  body:not(.portfolio-home) .page-hero:after{left:1.25rem;bottom:24px}
+  body:not(.portfolio-home) .about-section,
+  body:not(.portfolio-home) .projects-section,
+  body:not(.portfolio-home) .contact-section{padding:22px 0 65px}
+  body:not(.portfolio-home) .about-content,
+  body:not(.portfolio-home) .contact-info,
+  body:not(.portfolio-home) .contact-form-wrapper{padding:22px}
+  body:not(.portfolio-home) .skills-dashboard-section,
+  body:not(.portfolio-home) .experience-section,
+  body:not(.portfolio-home) .education-section{padding:48px 0}
+  body:not(.portfolio-home) .skills-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  body:not(.portfolio-home) .page-title{font-size:3.25rem}
+  body:not(.portfolio-home) .page-subtitle{font-size:.88rem}
+  body:not(.portfolio-home) .filter-container{display:flex;flex-wrap:wrap}
+  body:not(.portfolio-home) .filter-btn{padding:9px 12px;font-size:.78rem}
+  body:not(.portfolio-home) .project-content{padding:18px}
+}
