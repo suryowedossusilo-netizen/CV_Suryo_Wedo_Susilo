@@ -361,3 +361,100 @@ body.portfolio-home{--ink:#080d12;--panel:#101a22;--panel-soft:#172630;--steel:#
 @media(prefers-reduced-motion:reduce){
     .portfolio-home .project-card,.portfolio-home .interface-button{transition:none}
 }
+
+
+/* === Fix crowded hero controls and capability labels === */
+.portfolio-home .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:12px;
+}
+.portfolio-home .interface-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    min-height:52px;
+    white-space:nowrap;
+    line-height:1.2;
+    text-align:center;
+}
+.portfolio-home .portrait-index{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:max-content;
+    max-width:calc(100% - 24px);
+    white-space:nowrap;
+    line-height:1;
+}
+.portfolio-home .system-strip{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    align-items:center;
+    justify-items:center;
+    gap:10px;
+    padding:14px 16px;
+}
+.portfolio-home .system-strip>span{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-width:0;
+    white-space:nowrap;
+    line-height:1.25;
+    text-align:center;
+    font-size:clamp(.58rem,.8vw,.72rem);
+}
+.portfolio-home .system-strip>span i{flex:0 0 auto}
+.portfolio-home .system-strip .system-status{font-size:clamp(.52rem,.72vw,.66rem)}
+@media(max-width:900px){
+    .portfolio-home .system-strip{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:12px 8px;
+    }
+    .portfolio-home .system-strip>span:nth-child(3),
+    .portfolio-home .system-strip>.system-status{grid-column:1/-1}
+}
+@media(max-width:640px){
+    .portfolio-home .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+        width:100%;
+    }
+    .portfolio-home .hero-actions .interface-button{
+        width:100%;
+        min-height:50px;
+        padding:13px 16px;
+        font-size:.78rem;
+    }
+    .portfolio-home .portrait-index{
+        right:12px;
+        bottom:12px;
+        padding:8px 10px;
+        font-size:.68rem;
+    }
+    .portfolio-home .system-strip{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        justify-items:stretch;
+        gap:12px 8px;
+        padding:14px 10px;
+    }
+    .portfolio-home .system-strip>span{
+        justify-content:flex-start;
+        white-space:normal;
+        font-size:.62rem;
+        text-align:left;
+    }
+    .portfolio-home .system-strip>span:nth-child(3),
+    .portfolio-home .system-strip>.system-status{
+        grid-column:1/-1;
+        justify-content:center;
+        white-space:nowrap;
+    }
+    .portfolio-home .system-strip .system-status{font-size:.58rem}
+}
