@@ -585,3 +585,69 @@ body.portfolio-home{--ink:#080d12;--panel:#101a22;--panel-soft:#172630;--steel:#
         grid-row:3;
     }
 }
+
+
+/* === Final profile rail centering: stack every item on one center axis === */
+@media(max-width:640px){
+    .portfolio-home .portfolio-window .profile-rail{
+        position:relative;
+        inset:auto;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:center !important;
+        gap:0 !important;
+        width:100% !important;
+        height:auto !important;
+        min-height:0;
+        margin:22px auto 0 !important;
+        padding:0 0 12px !important;
+        text-align:center !important;
+        border:0 !important;
+        box-sizing:border-box;
+    }
+    .portfolio-home .portfolio-window .profile-rail .rail-avatar{
+        display:block;
+        width:76px !important;
+        height:76px !important;
+        flex:0 0 76px !important;
+        margin:0 auto 12px !important;
+        justify-self:center;
+    }
+    .portfolio-home .portfolio-window .profile-rail .rail-name{
+        display:block;
+        width:100% !important;
+        margin:0 auto !important;
+        text-align:center !important;
+        font-size:.82rem;
+        line-height:1.4;
+    }
+    .portfolio-home .portfolio-window .profile-rail .rail-socials{
+        display:flex !important;
+        flex-direction:row !important;
+        align-items:center !important;
+        justify-content:center !important;
+        width:100% !important;
+        margin:14px auto 0 !important;
+        padding:0 !important;
+        gap:18px !important;
+    }
+    .portfolio-home .portfolio-window .profile-rail .rail-socials a{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        width:30px;
+        height:30px;
+        margin:0 !important;
+    }
+    .portfolio-home .portfolio-window .profile-rail .rail-caption{
+        display:block !important;
+        width:100% !important;
+        margin:12px auto 0 !important;
+        padding:9px 0 0 !important;
+        border-top:1px solid rgba(190,220,233,.12);
+        text-align:center !important;
+        white-space:nowrap;
+        line-height:1.4;
+    }
+}
